@@ -1,0 +1,48 @@
+// 다음 main 함수에서 필요로 하는 swap 함수를 오버로딩 해서 구현해보자.
+
+#include <iostream>
+
+void swap(int *a, int*b);
+void swap(char *a, char *b);
+void swap(double *a, double *b);
+
+int main()
+{
+	int num1 = 20, num2 = 30;
+	swap(&num1, &num2);
+	std::cout << num1 << ' ' << num2 << '\n';
+
+	char ch1 = 'A', ch2 = 'Z';
+	swap(&ch1, &ch2);
+	std::cout << ch1 << " " << ch2 << '\n';
+
+	double dbl1 = 1.111, dbl2 = 5.555;
+	swap(&dbl1, &dbl2);
+	std::cout << dbl1 << " " << dbl2 << '\n';
+	return 0;
+}
+
+void swap(int *a, int*b)
+{
+	int emp = 0;
+
+	emp = *a;
+	*a = *b;
+	*b = emp;
+}
+void swap(char *a, char *b)
+{
+	char emp = 0;
+
+	emp = *a;
+	*a = *b;
+	*b = emp;
+}
+void swap(double *a, double *b)
+{
+	double emp = 0;
+
+	emp = *a;
+	*a = *b;
+	*b = emp;
+}
