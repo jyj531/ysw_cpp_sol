@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	const int num = 12;
+	const int* ref = &num;
+	const int* (&dref) = ref;
+
+	cout << "num : " << num << '\n';
+	cout << "dref : " << *dref << '\n';
+
+	return 0;
+}
