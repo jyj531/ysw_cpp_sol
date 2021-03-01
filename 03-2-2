@@ -1,0 +1,47 @@
+/////// Printer.cpp ////////////////////////
+#include <iostream>
+#include <cstring>
+#include "Printer.h"
+using namespace std;
+
+void Printer::SetString(const char* word)
+{
+	strcpy(words, word);
+}
+
+void Printer::ShowString()
+{
+	cout << words << endl;
+}
+////////////////////////////////////////////
+
+//////// main.cpp //////////////////////////
+#include "Printer.h"
+
+int main()
+{
+	Printer pnt;
+	pnt.SetString("Hello world!");
+	pnt.ShowString();
+
+	pnt.SetString("I love C++");
+	pnt.ShowString();
+	return 0;
+}
+////////////////////////////////////////////
+
+///////// Printer.h ////////////////////////
+#ifndef __PRINTER_H__
+#define __PRINTER_H__
+
+class Printer
+{
+private:
+	char words[100];
+public:
+	void SetString(const char* word);
+	void ShowString();
+};
+
+#endif
+///////////////////////////////////////////
